@@ -1,0 +1,17 @@
+if data
+  table(style="width: 100%; padding-top: 20px;")
+    each value, index in data
+      tr
+        td(style="border: 1px solid black;")=((page-1) * per_page) + index + 1
+        td(style="border: 1px solid black;")=value
+  ul.pagination
+    li
+      button.first(data-page=pagination.min_page) |<
+    li
+      button.prev(data-page=pagination.prev ) <
+    li
+      button.next(data-page=pagination.next ) >
+    li
+      button.last(data-page=pagination.max_page) >|
+else if error
+  p #{error}

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Insert file name to get log
+  p.
+      I assume that `./log` is server log directory for easier to test and check <br/>
+      also have 2 files name `short.log` and `long.log` to query <br/>
+
+      ps. so sorry for ui.  xp
+
+  .log(style="width: 100%")
+    input(type='text', style="width: 60%", val='app.js').input.search
+    button(type='submit', style="width: 30%").btn.btn-submit View
+
+    #result
+
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(src="/javascripts/main.js")
