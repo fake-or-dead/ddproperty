@@ -1,6 +1,4 @@
 var sinon = require('sinon');
-var chai = require('chai');
-var expect = chai.expect;
 var readFile = require('../routes/log/readFile');
 
 describe("Routes Log", function() {
