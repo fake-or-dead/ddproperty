@@ -1,7 +1,5 @@
 $(function() {
   $('.btn-submit').on('click', function(e){
-    console.log($('input.search').val());
-    // call function with params
     getLog($('input.search').val(), {}, function(data){ $('#result').html(data); });
   });
 
@@ -14,7 +12,7 @@ $(function() {
     options.filename = filename;
 
     $.ajax({
-      url: "/users",
+      url: "/",
       type: 'POST',
       data: options,
       success: function(data, status){
