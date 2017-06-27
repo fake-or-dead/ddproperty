@@ -1,4 +1,5 @@
 var sinon = require('sinon');
+
 var readFile = require('../routes/log/readFile');
 
 describe("Routes Log", function() {
@@ -17,7 +18,7 @@ describe("Routes Log", function() {
   })
 
   describe("POST with exists file", function() {
-    it("should respond", function() {
+    it("should respond with result", function() {
       var req,res,spy,fs;
       fs = require('fs');
       req = {body: {filename: 'long.log'}};
